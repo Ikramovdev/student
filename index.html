@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Login</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body class="Register-body">
+    <form class="login-form w-[475px] h-[550px] bg-white relative top-0 right-0 bottom-0  left-0 mx-auto mt-[100px] rounded-[20px] shadow-lg pt-[44px] px-[30px] text-center" autocomplete="off">
+        <img class="block mx-auto mb-[43px]" src="./images/Logo.svg" alt="Logo" width="285" height="39">
+        <h2 class="font-montserrat font-semibold mb-[9px] text-[22px] leading-[27px] text-black">Sign up</h2>
+        <p class="font-montserrat font-regular mb-[50px] text-[14px] leading-[17px] text-[#6C6C6C]">Enter your credentials to access your account</p>
+        <label class="w-[416px] flex flex-col mb-[20px]">
+          <span class="text-start pb-[10px] font-montserrat font-medium text-[14px] leading-[17px] text-[#6C6C6C]">Login</span>
+          <input class="w-[100%] py-[15px] pl-[5px] pr-[5px] border-[1px] border-[#CDCDCD] outline-none focus:shadow-md placeholder::text-[12px] focus:shadow-[#FEAF00] rounded-[4px]" type="text" placeholder="Enter your login" required name="username">
+        </label>
+        <label class="w-[416px] flex flex-col mb-[20px]">
+          <span class="text-start pb-[10px] font-montserrat font-medium text-[14px] leading-[17px] text-[#6C6C6C]">Password</span>
+          <input class="w-[100%] py-[15px] pl-[5px] pr-[5px] border-[1px] border-[#CDCDCD] outline-none focus:shadow-md placeholder::text-[12px] focus:shadow-[#FEAF00] rounded-[4px]" type="number" placeholder="Enter your password" required name="password">
+        </label>
+        <a href="./register.html" class="font-montserrat font-regular text-[18px] leading-[17px] text-black border-b-[2px] border-black">Sign up</a>
+        <button class="inline-block w-[100%] bg-[#FEAF00] py-[14px] rounded-[4px] text-white mt-[20px]" type="submit">SIGN UP</button>
+    </form>
+    <script src="./js/admin/login.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>

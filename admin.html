@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Admin</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body class="admin">
+  
+    <div class="flex">
+        <nav class="w-[18%] h-[100vh] overflow-y-auto bg-[#F2EAE1]">
+            <img class="pl-[25px] pt-[30px]" src="./images/Logo.svg" alt="Logo" width="183" height="24">
+            <ul class="pt-[60px] px-[38px] flex flex">
+                <li class="flex flex-col items-center">
+                    <img class="rounded-full inline-block pb-[10px] cursor-pointer" src="./images/person.svg" alt="student-img" width="141" height="214">
+                    <span class="adminName font-montserrat font-semibold text-[17px] text-black leading-[20px]">YourName</span>
+                    <p class="pt-[10px] font-montserrat font-medium text-[14px] leading-[17px] text-[#FEAF00]">Admin</p>
+                    <button class="students-info mt-[63px] flex items-center justify-center gap-[15px] w-[193px] bg-[#FEAF00] rounded-[4px] py-[10px] mb-[300px]">
+                        <img src="./images/student-cap.svg" alt="student-cap" width="20" height="16">
+                        <span class="font-montserrat font-medium text-[14px] leading-[17px] text-black">Students</span>
+                    </button>
+                    <button class="exit-admin flex items-center hover:scale-[1.2] duration-300 inline-block px-[50px] gap-[15px]">
+                        <span class="font-montserrat font-medium text-[14px] leading-[17px] text-black">Students</span>
+                        <img src="./images/exit-icon.svg" alt="exit-icon" width="17" height="17">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="w-[82%] h-[100vh] overflow-y-auto">
+            <div class="py-[20px] bg-[#F2EAE1] pl-[30px] flex items-center justify-end">
+                <div class="flex items-center mr-[41px] gap-[10px]">
+                    <label class="relative w-[212px] bg-white rounded-[8px]">
+                        <input class="search-student py-[10px] rounded-[8px] pl-[13px] outline-none placeholder::text-[#C4C4C4] pr-[29px] focus:shadow-md focus:shadow-gray-300" type="text" placeholder="Search..." name="searchValue">
+                        <img class="absolute left-[190px] bottom-[13px]" src="./images/search-img.svg" alt="search-img" width="14" height="14">
+                    </label>
+                    <button class="ml-[30px]">
+                        <img src="./images/call.svg" alt="call" width="20" height="23">
+                    </button>
+                </div>
+            </div>
+            <div class="px-[30px] pt-[20px] bg-slate-100">
+                <div class="flex items-center justify-between border-b-[1px] pb-[20px] border-[#E5E5E5]">
+                    <h2 class="font-montserrat font-semibold text-[22px] leading-[26px] text-black">Students List</h2>
+                    <div class="flex items-center justify-between gap-[30px]">
+                        <button onclick="handleSortBtnInfo()">
+                            <img src="./images/arrow-icon.svg" alt="arrow-icon" width="14" height="22">
+                        </button>
+                        <button class="add-student w-[199px] py-[14px] bg-[#FEAF00] rounded-[4px] text-white">ADD NEW STUDENT</button>
+                    </div>
+                </div> 
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th class="text-[#ACACAC] py-[17px] text-semibold text-[12px] leading-[35px] rounded-tl-md rounded-bl-md"></th>
+                            <th class="text-[#ACACAC] py-[17px] text-semibold text-[12px] leading-[35px]">Name</th>
+                            <th class="text-[#ACACAC] py-[17px] text-semibold text-[12px] leading-[35px]">Email</th>
+                            <th class="text-[#ACACAC] py-[17px] text-semibold text-[12px] leading-[35px]">Phone</th>
+                            <th class="text-[#ACACAC] py-[17px] text-semibold text-[12px] leading-[35px]">Enroll Number</th>
+                            <th class="text-[#ACACAC] py-[17px] text-semibold text-[12px] leading-[35px] rounded-tr-md rounded-br-md">Date admission</th>
+                        </tr>
+                    </thead>
+                    <tbody class="student-tbody">   
+                    </tbody> 
+                </table>      
+            </div>
+        </div>
+    </div>
+    <div id="wrapper" class="modal-wrapper scale-0 fixed top-0 bottom-0 right-0 left-0 backdrop-blur duration-300">
+        <div class="modal-inner w-[700px] h-[500px] bg-yellow-400 absolute top-0 bottom-0 right-0 left-0 m-auto rounded-lg">   
+        </div>
+    </div>
+
+    <script src="js/admin/login.js"></script>
+    <script src="./js/admin/admin.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
